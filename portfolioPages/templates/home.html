@@ -10,8 +10,15 @@
 	<link rel="stylesheet" type="text/css" href={% static 'styles/mystyles.css' %}
 </head>
 
+<style>
+    .left {
+        width: 60%;
+    }
+</style>
+
+
 <!--THE DROPDOWN-->
-<ul>
+<ul class="topmenu">
   <li><a href="https://www.linkedin.com/in/courtney-jacobs-django/" target="_blank"><img src={% static 'images/linkedin.png' %}></a></li>
   <li><a href="https://github.com/courthub74" target="_blank"><img class="sizeup"src={% static 'images/github.png' %}></a></li>
   <li><a href="https://www.facebook.com/courtney.jacobs.7798" target="_blank"><img src={% static 'images/facebook2.png' %}></a></li>
@@ -34,23 +41,36 @@
 
     <h2 class="left">About Me:</h2>
     <div class="container">
-        <p class="left" style="font-size: small;">I have had a fascination with coding since my first internship, studying computer science in college.  
+        <p class="left" style="font-size: small;">My name is Courtney Jacobs. I have had a fascination with coding since my first internship, studying computer science in college.  
             I was a support technician for a Software as a service company.  What started as a mere one day a week gig turned into a 7 year long work experience,
             which later elevated to team supervisor as the company grew.   
             Part of my responsibility was to test and debug software.  I gained much experience with the SDLC (Software Development Life-Cycle)
             and fell in love with the process of building an application with syntax ever since.      
-            Web Application development is something I would pursue as a hobby if money was no object.      
-            Below you will find projects that I've completed to showcase what I've learned on my coding journey.</p>
+            Web Application development is something I would pursue as a hobby if money was no object. <br><br> 
+            Below you will find a list of <strong>projects that I've completed</strong> to showcase what I've learned on my coding journey.</p>
     </div>
 
-        <br><hr><br>
+        <br><hr>
+
+
+        <style>
+            .blue {
+                color: blue;
+            }
+        </style>
+
+
+                                    
 
 
 
     <div class="left">
-        <a href="http://oracle.courdevelops.com/" target="_blank">CourDevs Workflow Oracle:</a><br>
+            
+
+            <a class="blue" href="http://oracle.courdevelops.com/" target="_blank">Workflow Oracle:</a><br>
 
         <p style="font-size: small;">Mobile-first web application designed to centralize all learning material and other record-keeping such as To-Do Lists and Scheduling matters. 
+            I have saved myself hours of development time by having this as a reference to learned information and tasks checklist.
         </p>
 
         ----------
@@ -68,10 +88,10 @@
 
 
     <div class="left">
-        <a href="http://employeeoracle.courdevelops.com/" target="_blank">NexCour Employee Registry:</a><br>
+        <a class="blue" href="http://employeeoracle.courdevelops.com/" target="_blank">NexCour Employee Registry:</a><br>
         <p style="font-size: small;">This project is a basic employee registry for a ficticious company called NexCour. <br>  
             The frontend application
-            renders employee data from a <a href="http://nexcouremployees.courdevelops.com/employees/" target="_blank">NexCour API</a> that I also created.</p>
+            renders employee data from a <a class="blue" href="http://nexcouremployees.courdevelops.com/employees/" target="_blank">NexCour API</a> that I also created.</p>
 
                 <br>
 
@@ -108,8 +128,8 @@
     <br><hr><br>
 
     <div class="left">
-        <a href="http://marysappt.courdevelops.com/" target="_blank">Marys Appointment App:</a><br>
-        <p style="font-size: small;">This is also a mobile first web application, created for the gig economy worker that needs
+        <a class="blue" href="http://marysappt.courdevelops.com/" target="_blank">Marys Appointment App:</a><br>
+        <p style="font-size: small;">A mobile first web application, created for the gig economy worker that needs
             fast, streamline, customized scheduling on the go.</p>
 
 
@@ -122,7 +142,7 @@
     <br><hr><br>
 
     <div class="left">
-            <a href="http://cryptonews.courdevelops.com/" target="_blank">Crypto News Network:</a><br>
+            <a class="blue" href="http://cryptonews.courdevelops.com/" target="_blank">Crypto News Network:</a><br>
             <p style="font-size: small;">This web app is useful for any cryptocurrency enthusiast.  It provides the latest news and
                         trading prices. </p>
 
@@ -138,7 +158,7 @@
     <br><hr><br>
 
     <div class="left">
-        <a href="http://nbaoracle.courdevelops.com/" target="_blank">NBA Oracle:</a> <br>
+        <a class="blue" href="http://nbaoracle.courdevelops.com/" target="_blank">NBA Oracle:</a> <br>
             <p style="font-size: small;">Out of a desire to get up to date NBA Scores without the need to access nba.com, <br>
                 I developed a Django web application in python that scrapes data from an NBA Basketball API. <br>
                 From the click of a drop-down menu you can get general info and scores of your favorite team. 
@@ -152,8 +172,8 @@
     <br><hr><br>
 
     <div class="left">
-        <a href="#" target="_blank">NHL Oracle:</a> <br>
-            <p style="font-size: small;">Coming Soon! 
+        <a class="blue" href="#" target="_blank">NHL Oracle:</a> <br>
+            <p style="font-size: small;">I am also a big NHL Hockey fan.  Coming Soon! 
                 </p>
 
                 ----------
@@ -170,6 +190,52 @@
         .white {
             color: white;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            width: 30%;
+            height: 30px;
+            font-size: 1.3em;
+            font-weight: 300;
+            padding-left: 5px;
+            border: 1px solid white;
+            background: #ffffff12;
+            color: #f1f2f6;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 30%;
+            height: 50%;
+            font-size: 1.3em;
+            font-weight: 300;
+            padding-left: 5px;
+            border: 1px solid white;
+            background: #ffffff12;
+            color: #f1f2f6;
+            border-radius: 5px;
+        }
+        button {
+            width: 5%;
+            height: 40px;
+            font-size: 1.3em;
+            font-weight: 300;
+            padding-left: 5px;
+            border: 1px solid white;
+            background: #ffffff12;
+            color: #f1f2f6;
+            border-radius: 5px;
+            cursor: pointer; 
+            transition: transform .2s;
+        }
+        button:hover {
+            transform: scale(1.5);
+        }
+        small {
+            color: white;
+        }
     </style>
 
     <div class="bottomSection">
@@ -182,7 +248,15 @@
                     <input required maxlength="50" type="text" placeholder="Email" name="email"> <br><br>
                     <textarea name="message" cols="30" rows="10" placeholder="Type Your Message Here"></textarea><br><br>
                     <button type="submit">Send</button>
-                    <br><br>
+                    <br>
+                    <p><small>This portfolio is powered by the Python | Django connection</small></p>
+                    <ul class="topmenu">
+                        <li><a href="https://www.linkedin.com/in/courtney-jacobs-django/" target="_blank"><img src={% static 'images/linkedin.png' %}></a></li>
+                        <li><a href="https://github.com/courthub74" target="_blank"><img class="sizeup"src={% static 'images/github.png' %}></a></li>
+                        <li><a href="https://www.facebook.com/courtney.jacobs.7798" target="_blank"><img src={% static 'images/facebook2.png' %}></a></li>
+                        <li><a href="https://www.instagram.com/courtj_135/" target="_blank"><img src={% static 'images/instagram.png' %}></a></li>
+                      </ul>
+                    <p><small>© 2020 Courdevelops L.L.C.</small></p>
                 </form>
             </div>
         </div>
