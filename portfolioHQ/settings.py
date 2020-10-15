@@ -117,6 +117,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'csoc783@gmail.com'
+EMAIL_HOST_PASSWORD = 'setuP984@2%'  # use environmental variable
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
 STATICFILES_STORAGE = 'whitenoise.storage. CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
