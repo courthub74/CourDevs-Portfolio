@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CourDevelops folio</title>
-	<link rel="stylesheet" type="text/css" href={% static 'styles/mystyles.css' %}
+    <link rel="stylesheet" type="text/css" href={% static 'styles/mystyles.css' %}
 </head>
 
 <style>
@@ -240,10 +240,12 @@
 
     <div class="bottomSection">
         <div class="contactSection">
+            <br>
             <h1 class="white">Contact Me</h1>
             <div class="container">
                 <div id="status">Message Sent</div>
-                <form>
+                <form action="#" method="POST">
+                    {% csrf_token %}
                     <input required maxlength="30" type="text" placeholder="Name" name="name"> <br><br>
                     <input required maxlength="50" type="text" placeholder="Email" name="email"> <br><br>
                     <textarea name="message" cols="30" rows="10" placeholder="Type Your Message Here"></textarea><br><br>
@@ -257,6 +259,8 @@
                         <li><a href="https://www.instagram.com/courtj_135/" target="_blank"><img src={% static 'images/instagram.png' %}></a></li>
                       </ul>
                     <p><small>© 2020 Courdevelops L.L.C.</small></p>
+
+                    <!-- <p><small>Someone emailed: {{ message_name }} | {{ message_email }} | {{ message }}</small></p> -->
                 </form>
             </div>
         </div>
