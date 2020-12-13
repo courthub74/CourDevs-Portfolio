@@ -4,16 +4,16 @@ from django.core.mail import send_mail
 #HomePage
 def home(request):
     if request.method == "POST":
-        message_name = request.POST['name']
-        message_email = request.POST['email']
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
         message = request.POST['message']
 
         # Send email
         send_mail(
             "Message from:" + message_name, # Subject
-            message_email, # email
             message, # message
-            ['courtneyj3470@gmail.com'], # To email
+            message_email, # from email
+            ['courdevelops@gmail.com'], # To email
             fail_silently=False, # Fail Safe
         )
 
@@ -24,7 +24,3 @@ def home(request):
 
         return render(request, "home.html", {})
 
-#ContactPage
-def contact(request):
-
-        return render(request, 'contact.html', {})

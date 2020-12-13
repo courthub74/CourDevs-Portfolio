@@ -32,6 +32,16 @@
   <li><a href="https://www.instagram.com/courtj_135/" target="_blank"><img src={% static 'images/instagram.png' %}></a></li>
 </ul>
 
+<br>
+{% if message_name %}
+    Thanks {{ message_name }}
+    <br>
+    You're email has been sent!
+{% endif %}
+
+
+
+
 
 <body>
 	<h1>CourDevelops</h1>
@@ -172,15 +182,16 @@
 
             <br>
 
-            <p style="font-size: small;">You can enter the Full Name or ID number to get more information on selected personnel.</p>
-             <p style="font-size: small;">You can also enter departments to see all personnel in each department:</p>
+            <p style="font-size: small;">You can enter the Full Name or ID number to get more information on selected personnel.</p> <br>
+            --------------------------------------------------------------------------
+             <p style="font-size: small;">Or you can search for personnel by department by selecting one of two buttons representing:</p>
               
               <div class="center">
                    ------------
                   <p style="font-size: small;"><b>[Executives | Developers]</b></p>
-                </div>
-             
+                </div> 
 
+                <p style="font-size: small;">on the navbar in the upper left corner.</p>
             ----------
 
         <p><b>Tech Stack used:  Python | Django | API | HTML | CSS | Bootstrap | Heroku </b></p>
@@ -319,16 +330,20 @@
         }
     </style>
 
+
+    <!--Contact Section-->
     <div class="bottomSection">
         <div class="contactSection">
             <br>
-            <h1 class="white">Contact Me</h1>
+            <h1 class="white">Contact Me - {{ message_name }}</h1>
             <div class="container">
                 <div id="status">Message Sent</div>
+
+                <!--FORM-->
                 <form action="#" method="POST">
                     {% csrf_token %}
-                    <input required maxlength="30" type="text" placeholder="Name" name="name"> <br><br>
-                    <input required maxlength="50" type="text" placeholder="Email" name="email"> <br><br>
+                    <input required maxlength="30" type="text" placeholder="Name" name="message-name"> <br><br>
+                    <input required maxlength="50" type="text" placeholder="Email" name="message-email"> <br><br>
                     <textarea name="message" cols="30" rows="10" placeholder="Type Your Message Here"></textarea><br><br>
                     <button type="submit">Send</button>
                     <br>
