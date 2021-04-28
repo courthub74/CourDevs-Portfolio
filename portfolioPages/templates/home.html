@@ -80,27 +80,29 @@
 <body>
 	<h1>CourDevelops</h1>
 
-	<img src="{% static 'images/CourtInTesla.jpg' %}" alt="Court in Tesla">
+	{% comment %} <img src="{% static 'images/CourtInTesla.jpg' %}" alt="Court in Tesla">
 
 	<img src="{% static 'images/Hiking.jpg' %}" alt="Hiking">
 
     <img src="{% static 'images/PunkinOut.jpg' %}" alt="PunkinOut">
     
-    <img src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg" alt="Code for the Masses">
+    <img src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg" alt="Code for the Masses"> {% endcomment %}
     
     <br><br>
 
     <h2 class="left">About Me:</h2>
 
     <div class="container">
-        <p class="left">My name is Courtney Jacobs. I have had a fascination with coding since my first internship, studying computer science in college.  
+        <p class="left">
+            My name is Courtney Jacobs. I am a solutions inclined, analytical, and creative Full Stack Web Developer, possesing experience in 
+            design, development, testing, and implementation of web application software. <br><br>
+            {% comment %} I have had a fascination with coding since my first internship, studying computer science in college.  
             I was a support technician for a Software as a service company.  What started as a mere one day a week gig turned into a 7 year long work experience,
             which later elevated to team supervisor as the company grew.   
             Part of my responsibility was to test and debug software.  I gained much experience with the SDLC (Software Development Life-Cycle)
             and fell in love with the process of building an application with syntax ever since.      
-            Web Application development is something I would pursue as a hobby if money was no object.<br><br> 
-            I am a solutions inclined, analytical, as well as creative Full Stack Web Developer with experience in 
-            design, development, testing, and implementation of web application software. <br><br>
+            Web Application development is something I would pursue as a hobby if money was no object.<br><br>  {% endcomment %}
+            
              </p>
     </div>
     
@@ -250,7 +252,7 @@
     <br><hr><br>
 
     <div class="left bigger">
-        <a class="blue" href="http://marysappt.courdevelops.com/" target="_blank">Marys Appointment App:</a><br>
+        <a class="blue" href="http://marysappt.courdevelops.com/" target="_blank">The Appointment App:</a><br>
         <p>A mobile first web application, created for the gig economy worker that needs
             fast, streamline, customized scheduling on the go.</p>
 
